@@ -1,12 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Smart Ticketing</title>
-</head>
-<body>
-    
-    
-</body>
+  </head>
+  <body>
+    <header class="mx-32">
+      <nav class="flex justify-between mt-14 mb-9">
+        <div>
+          <h2 class="text-gray-950 text-4xl font-extrabold font-['Raleway']">
+            Smart-Ticket
+          </h2>
+        </div>
+        <div>
+          <a
+            class="btn bg-[#1DD100] bg-opacity-10 rounded-xl border border-[#1DD100] border-opacity-40 text-center text-[#1DD100] text-xl font-bold font-['Raleway']"
+            >Bus
+            <img src="./images/bus-icon.png" alt="" />
+          </a>
+        </div>
+      </nav>
+      <div
+        class="bg-no-repeat text-center bg-contain min-h-screen pt-20 pb-36 px-52"
+        style="background-image: url('./images/banner.png')"
+      >
+        <h1 class="text-white text-6xl font-extrabold font-['Raleway']">
+          End-to-End Travel with
+          <p class="text-[#1DD100]">Doyel Paribahan</p>
+        </h1>
+        <p class="text-white text-lg font-normal font-['Inter'] py-5">
+          "Explore boundless horizons with Doyel Paribahan: Journey seamlessly
+          from start to finish, experiencing comfort, reliability, and the joy
+          of travel. Your adventure awaits with Doyel Paribahan."
+        </p>
+        <button
+          class="btn text-gray-950 text-xl font-bold font-['Raleway'] bg-[#1DD100] border-none"
+        >
+          Buy Tickets
+        </button>
+      </div>
+
+      <!-- offer section -->
+      <div>
+        <h2
+          class="text-center text-gray-950 text-4xl font-bold font-['Raleway'] mb-12"
+        >
+          Best offers for you
+        </h2>
+        <div class="flex gap-8">
+          <div class="bg-yellow-400 rounded-3xl flex gap-10 items-center px-14">
+            <div class="font-['Inter']">
+              <h1 class="text-gray-950 text-opacity-80 text-4xl font-black">
+                15% OFF
+              </h1>
+              <p class="text-gray-950 text-opacity-80 text-xl font-semibold">
+                on your next purchase
+              </p>
+              <p class="text-gray-950 text-opacity-50 text-lg font-medium">
+                use by January 2024
+              </p>
+            </div>
+            <div>
+              <img src="./images/cupon-devider.png" alt="" />
+            </div>
+            <div class="font-['Raleway']">
+              <h1 class="text-gray-950 text-3xl font-bold">NEW15</h1>
+              <h1 class="text-gray-950 text-opacity-40 text-xl font-medium">
+                Coupon Code
+              </h1>
+            </div>
+          </div>
+          <div class="bg-[#F78C9C] rounded-3xl flex gap-10 items-center px-14">
+            <div class="font-['Inter']">
+              <h1 class="text-gray-950 text-opacity-80 text-4xl font-black">
+                20% OFF
+              </h1>
+              <p class="text-gray-950 text-opacity-80 text-xl font-semibold">
+                on your next purchase
+              </p>
+              <p class="text-gray-950 text-opacity-50 text-lg font-medium">
+                use by January 2024
+              </p>
+            </div>
+            <div>
+              <img src="./images/cupon-devider.png" alt="" />
+            </div>
+            <div class="font-['Raleway']">
+              <h1 class="text-gray-950 text-3xl font-bold">Couple 20</h1>
+              <h1 class="text-gray-950 text-opacity-40 text-xl font-medium">
+                Coupon Code
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <button
+            class="btn text-[#1DD100] border border-[#1DD100] bg-white mt-12"
+          >
+            See All Offers
+          </button>
+        </div>
+      </div>
+    </header>
+    <main
+      class="bg-[#F7F8F8] mt-32 rounded-tl-3xl rounded-tr-3xl border-t-2 border-lime-600"
+    >
+      <div>
+        <div class="text-center mt-32">
+          <h1 class="text-gray-950 text-4xl font-bold font-['Raleway']">
+            Doyel Paribahan
+          </h1>
+          <p
+            class="text-gray-950 text-opacity-60 text-lg font-normal font-['Inter'] mt-8"
+          >
+            You can book your ticket by this section easily.Our system service
+            will be very helpful for you
+          </p>
+        </div>
+        <!-- ticket booking Section -->
+
+        <div class="bg-white flex justify-center items-center mx-32 rounded-3xl mt-12 gap-16">
+          <div >
+            <div class="flex justify-between">
+              <div class="flex text-gray-950 gap-4 ">
+                <img src="./images/bus-logo.svg" alt="" />
+                <div>
+                  <h1 class="text-3xl font-bold font-['Raleway'] ">
+                    Doyel Poribahan
+                  </h1>
+                  <p class="text-lg font-normal font-['Inter']">
+                    Coach-009-WEB ! AC_Business
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex bg-[#1DD10026] p-4 rounded-xl justify-center items-center"
+              >
+                <img src="./images/seat-green.png" alt="" />
+                <h2 class="text-[#1DD100] text-lg font-medium font-['Inter']">
+                  40 Seats left
+                </h2>
+              </div>
+            </div>
+            <div class="space-y-4 bg-[#F7F8F8] rounded-3xl p-8 mt-8">
+              <div
+                class="flex justify-between font-['Raleway'] text-gray-950 text-lg font-semibold"
+              >
+                <h3 class="text-opacity-60">Route</h3>
+                <h3>Dhaka - Sylhet</h3>
+              </div>
+              <hr />
+              <div
+                class="flex justify-between font-['Raleway'] text-gray-950 text-lg font-semibold"
+              >
+                <h3 class="text-opacity-60">Departure Time</h3>
+                <h3>9:00 PM</h3>
+              </div>
+              <hr />
+              <div class="flex gap-8 items-center justify-center">
+                <div
+                  class="flex bg-[#eaebec] p-5 rounded-xl justify-center items-center"
+                >
+                  <h2
+                    class="text-gray-950 text-base font-medium font-['Inter']"
+                  >
+                    Boarding Point - Laxmipur
+                  </h2>
+                </div>
+                <div
+                  class="flex bg-[#eaebec] p-5 rounded-xl justify-center items-center"
+                >
+                  <h2
+                    class="text-gray-950 text-base font-medium font-['Inter']"
+                  >
+                    Dropping Point - Bogura
+                  </h2>
+                </div>
+                <div
+                  class="flex bg-[#eaebec] p-5 rounded-xl justify-center items-center"
+                >
+                  <h2
+                    class="text-gray-950 text-base font-medium font-['Inter']"
+                  >
+                    Est. Time - 11 Hour
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="./images/info-devider.png" alt="" />
+          </div>
+          <div class="flex flex-col">
+            <img src="./images/fare.png" alt="" />
+            <h1 class="text-gray-950 text-3xl font-bold font-['Raleway']">
+              550 Taka
+            </h1>
+            <h2
+              class="text-gray-950 text-opacity-60 text-2xl font-semibold font-['Raleway']"
+            >
+              Per Seat
+            </h2>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
