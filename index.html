@@ -321,7 +321,7 @@
           <hr class="my-6" />
           <div class="bg-[#F7F8F8] p-8 rounded-xl">
             <div
-              class="flex justify-between items-center  text-gray-950 text-base font-medium font-['Inter']"
+              class="flex justify-between items-center text-gray-950 text-base font-medium font-['Inter']"
             >
               <p>
                 Seat
@@ -335,7 +335,10 @@
               <p>Price</p>
             </div>
             <hr class="my-4" />
-            <div id="show-seat" class="grid grid-cols-3  text-gray-950 text-opacity-60 text-base font-normal font-['Inter']"></div>
+            <div
+              id="show-seat"
+              class="grid grid-cols-3 text-gray-950 text-opacity-60 text-base font-normal font-['Inter']"
+            ></div>
             <hr class="my-4" />
             <div
               class="flex justify-between text-gray-950 text-base font-medium font-['Inter']"
@@ -345,19 +348,25 @@
             </div>
             <div class="form-control items-center my-5">
               <div id="btn-clk" class="input-group">
-                <input id="cpn-input"
+                <input
+                  id="cpn-input"
                   type="text"
                   placeholder="Have any coupon?"
                   class="input input-bordered"
-                  />
-                  <button id="apply-btn" disabled class="btn bg-[#1DD100] text-white">Apply</button>
+                />
+                <button
+                  id="apply-btn"
+                  disabled
+                  class="btn bg-[#1DD100] text-white"
+                >
+                  Apply
+                </button>
               </div>
             </div>
-            <div id="discount"
+            <div
+              id="discount"
               class="flex justify-between text-gray-950 text-base font-medium font-['Inter'] mb-5"
-            >
-              
-            </div>
+            ></div>
             <div
               class="flex justify-between text-gray-950 text-base font-medium font-['Inter']"
             >
@@ -365,7 +374,10 @@
               <p>BDT <span id="grand-total">0</span></p>
             </div>
             <button
-              class="flex w-full py-5 bg-[#1DD100] rounded-2xl justify-center items-center text-white text-xl font-extrabold font-['Raleway'] my-8"
+            disabled
+            id="nxt-btn"
+              onclick="my_modal_5.showModal()"
+              class=" flex w-full py-5 bg-[#1DD100] rounded-2xl justify-center items-center text-white text-xl font-extrabold font-['Raleway'] my-8"
             >
               Next
             </button>
@@ -373,6 +385,29 @@
         </div>
       </div>
     </main>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog  id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div class="flex flex-col text-center items-center">
+          <img src="./images/success.png" alt="" />
+          <h1 class="text-green-500 text-2xl font-bold">SUCCESS</h1>
+          <p class="text-neutral-600 text-xl font-medium py-4">Thank you for Booking Our Bus Seats.</p>
+          <p class="text-neutral-600 text-xl font-light">
+            We are working hard to find the best service and deals for you.
+            Shortly you will find a confirmation in your email.
+          </p>
+
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="text-white bg-green-500 rounded-3xl btn ">Continue</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
     <script src="./script.js"></script>
   </body>
 </html>

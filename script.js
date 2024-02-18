@@ -16,6 +16,8 @@ for (let button of buttons) {
 
     colorChange(button);
     CostCount();
+    const nxtBtn = document.getElementById("nxt-btn");
+          nxtBtn.removeAttribute("disabled");
   });
 }
 function colorChange(button) {
