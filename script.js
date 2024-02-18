@@ -3,6 +3,7 @@ let totalSeat = 0;
 let bookedSeat = 0;
 let totalCost = 0;
 let grandTotal = 0;
+let c = 0;
 
 const buttons = document.getElementsByClassName("bton");
 for (let button of buttons) {
@@ -59,6 +60,7 @@ function CostCount() {
           btnClk.addEventListener("click", function () {
             gCost.innerText = parseInt(grandTotal - grandTotal * 0.15);
             btnClk.style.display = "none";
+            discount(grandTotal, 0.15);
           });
         } else if (input === "Couple 20" && btnClick >= 4) {
           const aplyBtn = document.getElementById("apply-btn");
@@ -66,17 +68,22 @@ function CostCount() {
           btnClk.addEventListener("click", function () {
             gCost.innerText = parseInt(grandTotal - grandTotal * 0.2);
             btnClk.style.display = "none";
+            discount(grandTotal, 0.2);
           });
         }
       });
   });
 }
 
-function discount(){
-    const discountAmount = 
-
-
-
-
-
+function discount(grandTotal, amount) {
+  if (c === 0) {
+    const discountAmount = document.getElementById("discount");
+    const p1 = document.createElement("p");
+    p1.textContent = "Discount Amount : ";
+    const p2 = document.createElement("p");
+    p2.textContent = parseInt(grandTotal * amount);
+    discountAmount.appendChild(p1);
+    discountAmount.appendChild(p2);
+  }
+  c++;
 }
