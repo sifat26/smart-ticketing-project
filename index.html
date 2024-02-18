@@ -244,7 +244,7 @@
           <div class="space-y-6">
             <div class="flex justify-end">
               <img
-                class=" bg-[#E6E7E8] solid-opacity-10 rounded-xl px-10 py-4"
+                class="bg-[#E6E7E8] solid-opacity-10 rounded-xl px-10 py-4"
                 src="./images/tabler-icon-steering-wheel.svg"
                 alt=""
               />
@@ -321,11 +321,13 @@
           <hr class="my-6" />
           <div class="bg-[#F7F8F8] p-8 rounded-xl">
             <div
-              class="flex justify-between text-gray-950 text-base font-medium font-['Inter']"
+              class="flex justify-between items-center  text-gray-950 text-base font-medium font-['Inter']"
             >
               <p>
                 Seat
-                <span id="booked-seat"  class="bg-[#1DD100] text-xs px-2 rounded-md text-white"
+                <span
+                  id="booked-seat"
+                  class="bg-[#1DD100] text-xs px-2 rounded-md text-white"
                   >0</span
                 >
               </p>
@@ -333,29 +335,34 @@
               <p>Price</p>
             </div>
             <hr class="my-4" />
-            <div></div>
+            <div id="show-seat" class="grid grid-cols-3  text-gray-950 text-opacity-60 text-base font-normal font-['Inter']"></div>
             <hr class="my-4" />
             <div
               class="flex justify-between text-gray-950 text-base font-medium font-['Inter']"
             >
               <p>Total Price</p>
-              <p>BDT <span>0</span></p>
+              <p>BDT <span id="total-cost">0</span></p>
             </div>
             <div class="form-control items-center my-5">
-              <div class="input-group">
-                <input
+              <div id="btn-clk" class="input-group">
+                <input id="cpn-input"
                   type="text"
-                  placeholder="Have any copupon?"
+                  placeholder="Have any coupon?"
                   class="input input-bordered"
-                />
-                <button class="btn bg-[#1DD100] text-white">Apply</button>
+                  />
+                  <button id="apply-btn" disabled class="btn bg-[#1DD100] text-white">Apply</button>
               </div>
+            </div>
+            <div id="discount"
+              class="flex justify-between text-gray-950 text-base font-medium font-['Inter']"
+            >
+              
             </div>
             <div
               class="flex justify-between text-gray-950 text-base font-medium font-['Inter']"
             >
               <p>Grand Total</p>
-              <p>BDT <span>0</span></p>
+              <p>BDT <span id="grand-total">0</span></p>
             </div>
             <button
               class="flex w-full py-5 bg-[#1DD100] rounded-2xl justify-center items-center text-white text-xl font-extrabold font-['Raleway'] my-8"
