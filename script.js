@@ -57,14 +57,14 @@ function CostCount() {
           aplyBtn.removeAttribute("disabled");
 
           btnClk.addEventListener("click", function () {
-            gCost.innerText = grandTotal - grandTotal * 0.15;
+            gCost.innerText = parseInt(grandTotal - grandTotal * 0.15);
             btnClk.style.display = "none";
           });
         } else if (input === "Couple 20" && btnClick >= 4) {
           const aplyBtn = document.getElementById("apply-btn");
           aplyBtn.removeAttribute("disabled");
           btnClk.addEventListener("click", function () {
-            gCost.innerText = grandTotal - grandTotal * 0.2;
+            gCost.innerText = parseInt(grandTotal - grandTotal * 0.2);
             btnClk.style.display = "none";
           });
         }
@@ -73,5 +73,10 @@ function CostCount() {
 }
 
 function discount(){
-    
+    const discountAmount = 
+
+
+
+
+
 }
