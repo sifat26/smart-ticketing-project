@@ -10,14 +10,14 @@ for (let button of buttons) {
   button.addEventListener("click", function () {
     btnClick++;
     if (btnClick > 4) {
-      alert("Please select 4 Ticket");
+      alert("You Can Book only 4 Ticket");
       return;
     }
 
     colorChange(button);
     CostCount();
     const nxtBtn = document.getElementById("nxt-btn");
-          nxtBtn.removeAttribute("disabled");
+    nxtBtn.removeAttribute("disabled");
   });
 }
 function colorChange(button) {
@@ -50,28 +50,31 @@ function CostCount() {
   grandTotal += 550;
   gCost.innerText = grandTotal;
   const btnClk = document.getElementById("btn-clk");
+  const aplyBtn = document.getElementById("apply-btn");
+
   btnClk.addEventListener("click", function () {
     const inputValue = document
       .getElementById("cpn-input")
       .addEventListener("keyup", function (event) {
         const input = event.target.value;
-        if (input === "NEW15" && btnClick >= 4) {
-          const aplyBtn = document.getElementById("apply-btn");
-          aplyBtn.removeAttribute("disabled");
-
-          btnClk.addEventListener("click", function () {
-            gCost.innerText = parseInt(grandTotal - grandTotal * 0.15);
-            btnClk.style.display = "none";
-            discount(grandTotal, 0.15);
-          });
-        } else if (input === "Couple 20" && btnClick >= 4) {
-          const aplyBtn = document.getElementById("apply-btn");
-          aplyBtn.removeAttribute("disabled");
-          btnClk.addEventListener("click", function () {
-            gCost.innerText = parseInt(grandTotal - grandTotal * 0.2);
-            btnClk.style.display = "none";
-            discount(grandTotal, 0.2);
-          });
+        if (btnClick >= 4) {
+          if (input === "NEW15") {
+            aplyBtn.removeAttribute("disabled");
+            aplyBtn.addEventListener("click", function () {
+              gCost.innerText = parseInt(grandTotal - grandTotal * 0.15);
+              btnClk.style.display = "none";
+              discount(grandTotal, 0.15);
+            });
+          } else if (input === "Couple 20") {
+            aplyBtn.removeAttribute("disabled");
+            aplyBtn.addEventListener("click", function () {
+              gCost.innerText = parseInt(grandTotal - grandTotal * 0.2);
+              btnClk.style.display = "none";
+              discount(grandTotal, 0.2);
+            });
+          } else {
+            aplyBtn.setAttribute("disabled", true);
+          }
         }
       });
   });
