@@ -4,6 +4,8 @@ let bookedSeat = 0;
 let totalCost = 0;
 let grandTotal = 0;
 let c = 0;
+let firstCoupon =document.getElementById("st-cpn").innerText;
+let secondCoupon = document.getElementById("nd-cpn").innerText;
 
 const buttons = document.getElementsByClassName("bton");
 for (let button of buttons) {
@@ -58,14 +60,14 @@ function CostCount() {
       .addEventListener("keyup", function (event) {
         const input = event.target.value;
         if (btnClick >= 4) {
-          if (input === "NEW15") {
+          if (input === firstCoupon) {
             aplyBtn.removeAttribute("disabled");
             aplyBtn.addEventListener("click", function () {
               gCost.innerText = parseInt(grandTotal - grandTotal * 0.15);
               btnClk.style.display = "none";
               discount(grandTotal, 0.15);
             });
-          } else if (input === "Couple 20") {
+          } else if (input === secondCoupon) {
             aplyBtn.removeAttribute("disabled");
             aplyBtn.addEventListener("click", function () {
               gCost.innerText = parseInt(grandTotal - grandTotal * 0.2);
